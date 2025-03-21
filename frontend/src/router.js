@@ -10,20 +10,22 @@ import useUserStore from "./store/user.js";
 const routes = [
   {
     path: "/",
-    component: DefaultLayout,
-    children: [
-      {path: '/', name: 'Home', component: Home},
-      {path: '/images', name: 'MyImages', component: MyImages},
-    ],
-    beforeEnter: async (to, from, next) => {
-      try {
-        const userStore = useUserStore();
-        await userStore.fetchUser();
-        next();
-      } catch (error) {
-        next(false); // Cancel navigation if data fetching fails
-      }
-    },
+    name: 'Home',
+    component: Home,
+    // beforeEnter: async (to, from, next) => {
+    //   try {
+    //     const userStore = useUserStore();
+    //     await userStore.fetchUser();
+    //     next();
+    //   } catch (error) {
+    //     next(false); // Cancel navigation if data fetching fails
+    //   }
+    // },    
+  },
+  {
+    path: "/images",
+    name: 'MyImages',
+    component: MyImages,    
   },
   {
     path: '/login',
