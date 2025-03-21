@@ -19,12 +19,7 @@
               </div>
             </div>
             <div class="hidden md:block">
-              <div class="ml-4 flex items-center md:ml-6">
-                <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
-                  <span class="absolute -inset-1.5" />
-                  <span class="sr-only">View notifications</span>
-                  <BellIcon class="size-6" aria-hidden="true" />
-                </button>
+              <div class="ml-4 flex items-center md:ml-6">               
   
                 <!-- Profile dropdown -->
                 <Menu as="div" class="relative ml-3">
@@ -78,12 +73,7 @@
               <div class="ml-3">
                 <div class="text-base/5 font-medium text-white">{{ user.name }}</div>
                 <div class="text-sm font-medium text-gray-400">{{ user.email }}</div>
-              </div>
-              <button type="button" class="relative ml-auto shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
-                <span class="absolute -inset-1.5" />
-                <span class="sr-only">View notifications</span>
-                <BellIcon class="size-6" aria-hidden="true" />
-              </button>
+              </div>              
             </div>
             <div class="mt-3 space-y-1 px-2">
               <DisclosureButton @click="logout" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign out
@@ -108,7 +98,7 @@
   
   <script setup>
   import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-  import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
   
   const user = {
     name: 'Tom Cook',
